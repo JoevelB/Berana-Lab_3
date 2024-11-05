@@ -8,12 +8,11 @@ const LogInPage = ({ navigation }) => {
     <SafeAreaView style={styles.container}>
       <View style={styles.logoContainer}>
         <View style={styles.circleContainer}>
-          <Image source={require('./assets/AppLogo.png')} style={styles.logo} resizeMode="cover" />
+          <Image source={require('../assets/AppLogo.png')} style={styles.logo} resizeMode="cover" />
         </View>
         <Text style={styles.appName}>J3erana</Text>
       </View>
 
-      {/* Username Input with Overlay Icon */}
       <View style={styles.inputContainer}>
         <Icon name="user" size={20} color="#3e7139" style={styles.icon} />
         <TextInput
@@ -24,7 +23,6 @@ const LogInPage = ({ navigation }) => {
         />
       </View>
 
-      {/* Password Input with Overlay Icon */}
       <View style={styles.inputContainer}>
         <Icon name="key" size={20} color="#3e7139" style={styles.icon} />
         <TextInput
@@ -66,24 +64,23 @@ const styles = StyleSheet.create({
     marginBottom: 50,
   },
   circleContainer: {
-    width: 100, // Width of the circle
-    height: 100, // Height of the circle
-    borderRadius: 50, // Make it circular
+    width: 100,
+    height: 100,
+    borderRadius: 50,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ffffff', // Optional: set background color
-    shadowColor: '#000', // Optional: add shadow for better visibility
-    shadowOffset: { width: 0, height: 2 }, // Optional: adjust shadow offset
-    shadowOpacity: 0.2, // Optional: adjust shadow opacity
-    shadowRadius: 4, // Optional: adjust shadow radius
-    elevation: 5, // Optional: for Android shadow
-    overflow: 'hidden', // Ensures the logo fits perfectly inside the circle
+    backgroundColor: '#ffffff',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 5,
+    overflow: 'hidden',
   },
   logo: {
-    width: '100%', // Occupy the full width of the circle
-    height: '100%', // Occupy the full height of the circle
-    // Ensure the logo scales correctly
-    resizeMode: 'cover', // Use cover to fill the circle without distortion
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
   },
   appName: {
     marginTop: 12,
@@ -99,13 +96,13 @@ const styles = StyleSheet.create({
   icon: {
     position: 'absolute',
     left: 22,
-    top: 20, // Adjust based on the height of the TextInput
+    top: 20,
     zIndex: 1,
   },
   input: {
     backgroundColor: '#ffffff',
     color: '#3e7139',
-    paddingLeft: 40, // Space for the icon
+    paddingLeft: 40,
   },
   forgotPasswordText: {
     alignSelf: 'flex-end',

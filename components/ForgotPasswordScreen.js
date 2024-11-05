@@ -12,7 +12,6 @@ const ForgotPasswordScreen = ({ navigation }) => {
         Enter your email address below, and we'll send you a link to reset your password.
       </Text>
 
-      {/* Email Input with Overlay Icon */}
       <View style={styles.inputContainer}>
         <Icon name="envelope" size={20} color="#3e7139" style={styles.icon} />
         <TextInput
@@ -67,13 +66,13 @@ const styles = StyleSheet.create({
   icon: {
     position: 'absolute',
     left: 22,
-    top: 20, // Adjust based on the height of the TextInput
+    top: 20, 
     zIndex: 1,
   },
   input: {
     backgroundColor: '#ffffff',
     color: '#3e7139',
-    paddingLeft: 40, // Space for the icon
+    paddingLeft: 40, 
   },
   resetButton: {
     width: '100%',

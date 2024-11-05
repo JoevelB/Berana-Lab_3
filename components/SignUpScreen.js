@@ -8,7 +8,6 @@ const SignUpScreen = ({ navigation }) => {
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Create an Account</Text>
 
-      {/* Username Input with Overlay Icon */}
       <View style={styles.inputContainer}>
         <Icon name="user" size={20} color="#3e7139" style={styles.icon} />
         <TextInput
@@ -19,7 +18,6 @@ const SignUpScreen = ({ navigation }) => {
         />
       </View>
 
-      {/* Email Input with Overlay Icon */}
       <View style={styles.inputContainer}>
         <Icon name="envelope" size={20} color="#3e7139" style={styles.icon} />
         <TextInput
@@ -30,7 +28,6 @@ const SignUpScreen = ({ navigation }) => {
         />
       </View>
 
-      {/* Password Input with Overlay Icon */}
       <View style={styles.inputContainer}>
         <Icon name="key" size={20} color="#3e7139" style={styles.icon} />
         <TextInput
@@ -42,7 +39,6 @@ const SignUpScreen = ({ navigation }) => {
         />
       </View>
 
-      {/* Confirm Password Input with Overlay Icon */}
       <View style={styles.inputContainer}>
         <Icon name="lock" size={20} color="#3e7139" style={styles.icon} />
         <TextInput
@@ -92,13 +88,13 @@ const styles = StyleSheet.create({
   icon: {
     position: 'absolute',
     left: 22,
-    top: 20, // Adjust based on the height of the TextInput
+    top: 20, 
     zIndex: 1,
   },
   input: {
     backgroundColor: '#ffffff',
     color: '#3e7139',
-    paddingLeft: 40, // Space for the icon
+    paddingLeft: 40, 
   },
   signUpButton: {
     width: '100%',
