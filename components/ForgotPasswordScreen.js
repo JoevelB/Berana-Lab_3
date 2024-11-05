@@ -1,11 +1,17 @@
 import React from 'react';
-import { SafeAreaView, Text, StyleSheet, View } from 'react-native';
+import { SafeAreaView, Text, StyleSheet, View, Image } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const ForgotPasswordScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
+      <View style={styles.logoContainer}>
+        <View style={styles.circleContainer}>
+          <Image source={require('../assets/AppLogo.png')} style={styles.logo} resizeMode="cover" />
+        </View>
+      </View>
+
       <Text style={styles.title}>Reset Password</Text>
 
       <Text style={styles.instructionText}>
@@ -46,6 +52,29 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#f0f0f0',
   },
+  logoContainer: {
+    alignItems: 'center',
+    marginBottom: 50, 
+  },
+  circleContainer: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ffffff',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 5,
+    overflow: 'hidden',
+  },
+  logo: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+  },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -66,13 +95,13 @@ const styles = StyleSheet.create({
   icon: {
     position: 'absolute',
     left: 22,
-    top: 20, 
+    top: 20,
     zIndex: 1,
   },
   input: {
     backgroundColor: '#ffffff',
     color: '#3e7139',
-    paddingLeft: 40, 
+    paddingLeft: 40,
   },
   resetButton: {
     width: '100%',

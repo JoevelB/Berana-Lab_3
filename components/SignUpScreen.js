@@ -1,11 +1,17 @@
 import React from 'react';
-import { SafeAreaView, Text, StyleSheet, View } from 'react-native';
+import { SafeAreaView, Text, StyleSheet, View, Image } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const SignUpScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
+      <View style={styles.logoContainer}>
+        <View style={styles.circleContainer}>
+          <Image source={require('../assets/AppLogo.png')} style={styles.logo} resizeMode="cover" />
+        </View>
+      </View>
+
       <Text style={styles.title}>Create an Account</Text>
 
       <View style={styles.inputContainer}>
@@ -74,11 +80,34 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#f0f0f0',
   },
+  logoContainer: {
+    alignItems: 'center',
+    marginBottom: 10, 
+  },
+  circleContainer: {
+    width: 50,  
+    height: 50, 
+    borderRadius: 40, 
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ffffff',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 5,
+    overflow: 'hidden',
+  },
+  logo: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+  },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     color: '#3e7139',
-    marginBottom: 30,
+    marginBottom: 15,
   },
   inputContainer: {
     position: 'relative',
